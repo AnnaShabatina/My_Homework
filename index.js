@@ -14,12 +14,10 @@ let lego = {
         return info;
     }
   }
-   
-
 console.log(lego.getInfo());
 
 lego.interest = "auto";
 
-console.log(lego.getInfo());
+console.log(lego.getInfo()); 
 
 
