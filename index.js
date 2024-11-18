@@ -1,24 +1,24 @@
 
 var services = {
-"стрижка": "60 грн",
+"стрижка": "60.66 грн",
 "гоління": "80 грн",
 "Миття голови": "100 грн",
   price(){
     let pr = 0;
        for(let key in this) {
             if (typeof this[key] !== 'function') { 
-              let allPrice = parseInt(this[key].slice(0,-3));
+              let allPrice = parseFloat(this[key]);
        
        pr += allPrice;
       }
   }
-   return "загальна вартість наданих послуг:  " + pr + " грн";
+   return "загальна вартість наданих послуг:  " + pr.toFixed(2) + " грн";
  },
   minPrice(){
    const allPr = [];
   for(let key in this) {
             if (typeof this[key] !== 'function') { 
-              let allPrice = parseInt(this[key].slice(0,-3)); 
+              let allPrice = parseFloat(this[key]); 
               allPr.push(allPrice) ;
             
     }
@@ -32,7 +32,7 @@ var services = {
    const allPr = [];
   for(let key in this) {
             if (typeof this[key] !== 'function') { 
-              let allPrice = parseInt(this[key].slice(0,-3)); 
+              let allPrice = parseFloat(this[key]); 
               allPr.push(allPrice) ;
             
     }
