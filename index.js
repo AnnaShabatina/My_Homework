@@ -1,6 +1,30 @@
+var arr = [
+    {
+        userName:"Test",
+        lastName:"Test",
+        email:"test.test@gmail.com"
+    },
+    {
+        userName:"Dmitro",
+        lastName:"Porohov",
+        email:"dmitro.porohov@yahoo.com"
+    },
+    {
+        userName:"Andrii",
+        lastName:"",
+        email:"andrii@mail.ru" // Нам такі не підходять
+    },
+];
+var newArr = [];
 
-const text = "Wonderful Joyful Happiness Time Task Apple";
-const pattern = /\b(?!\w*[aA])\w{6,}\b/g;
+for (let i = 0; i < arr.length; i++) {
+ if (/^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com)$/.test(arr[i].email))
+  { 
+    newArr.push(arr[i].email);
+  }
 
-const res = text.match(pattern);
-console.log(res)
+    }
+console.log(newArr)
+
+
+  
